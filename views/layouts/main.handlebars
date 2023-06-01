@@ -3,20 +3,14 @@
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    
+    <script src ="https://cdn.tailwindcss.com"></script>
     <title>Project 2</title>
   </head>
 
-  <body>
-    <div class=''>
-      <header class=''>
-        <h1>
-          {{#if logged_in}}
-            <a href='/home'>Project 2</a>
-          {{else}}
-            <a href='/'>Project 2</a>
-          {{/if}}
-        </h1>
+  <body class=" text-black">
+    <div class='container mx-auto'>
+      <header class='py-4'>
+        
         <nav>
           <!-- Conditionally render login or logout links -->
           {{#if logged_in}}
@@ -24,13 +18,13 @@
 
             <a href='/profile'>profile</a>
 
-            <button class='' id='logout'>logout</button>
+            <button class=' rounded py-2 px-4' id='logout'>logout</button>
           {{else}}
-            <a href='/login'>Login or Sign-up</a>
+            <a href='/login'>Login or Register</a>
           {{/if}}
         </nav>
       </header>
-      <main class=''>
+      <main class='py-4'>
         <!-- Render the sub layout -->
         {{{body}}}
       </main>
