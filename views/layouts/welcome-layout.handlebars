@@ -13,7 +13,7 @@
   <body class='bg-gray-800'>
     <div class=''>
       <header >
-        {{!-- <h1 class=''> 
+        <h1 class=''> 
           {{#if logged_in}}
             <a class= 'text-lg-white' href='/home'>Audio<span class='text-red-500'>RED</span></a>
           {{else}}
@@ -22,24 +22,15 @@
         </h1>
         <nav class="text-shadow-outline flex justify-center p-10 max-w-max mx-auto mt-28 bg-gray-700 rounded-xl shadow-lg flex items-center text-gray text-md'">
           <!-- Conditionally render login or logout links -->
-        </nav> --}}
-        <nav class="flex justify-between">
-          <div class="grow">
           {{#if logged_in}}
-            <a class='text-lg-white' href='/home'>Audio<span class='text-red-500'>RED</span></a>
-          {{else}}
-            <a class='text-lg-white' href='/'>Audio<span class='text-red-500'>RED</span></a>
-          {{/if}}
-          </div>
-          <div class="flex gap-2">
-          {{#if logged_in}}
+            <a href='/home'>AudioRED</a>
+
             <a href='/profile'>profile</a>
 
             <button class='' id='logout'>logout</button>
           {{else}}
             <a class='text-red-500' href='/login'>Login or Sign-up</a>
           {{/if}}
-          </div>
         </nav>
       </header>
       <main class=''>

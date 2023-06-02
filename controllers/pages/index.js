@@ -13,7 +13,9 @@ router.use('/home', withAuth, home);
 router.use('/login', login);
 
 router.get('/', (req, res) => {
-  return res.render('welcome');
+  return res.render('welcome', {
+    layout: 'welcome-layout'
+  });
 });
 
 module.exports = router;
