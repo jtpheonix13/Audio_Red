@@ -35,14 +35,14 @@
           {{#if logged_in}}
             <a href='/profile'>profile</a>
 
-            <button class='' id='logout'>logout</button>
+            <button class=' m-2 block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white-700 md:p-0 dark:text-red md:dark:hover:text-white-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent' id='logout'>Logout</button>
           {{else}}
             <a class='text-red-500' href='/login'>Login or Sign-up</a>
           {{/if}}
           </div>
         </nav>
       </header>
-      <main class=''>
+      <main class='py-4'>
         <!-- Render the sub layout -->
         {{{body}}}
       </main>
