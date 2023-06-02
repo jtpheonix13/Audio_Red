@@ -8,19 +8,20 @@
   </head>
 
   <body class=" text-black">
-    <div class='container mx-auto'>
-      <header class='py-4'>
+    <div class='  container mx-auto'>
+      <header class='bg-red-500 py-4'>
         
-        <nav>
+        <nav class="flex justify-end  font-medium m-1">
           <!-- Conditionally render login or logout links -->
           {{#if logged_in}}
-            <a href='/home'>home</a>
+            <a class="m-2 block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white-700 md:p-0 dark:text-red md:dark:hover:text-white-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" href='/home'>Home</a>
 
-            <a href='/profile'>profile</a>
+            <a class="m-2 block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white-700 md:p-0 dark:text-red md:dark:hover:text-white-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" href='/profile'>Profile</a>
 
-            <button class=' rounded py-2 px-4' id='logout'>logout</button>
+            <button class=' m-2 block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white-700 md:p-0 dark:text-red md:dark:hover:text-white-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent' id='logout'>Logout</button>
           {{else}}
-            <a href='/login'>Login or Register</a>
+            <a href='/login' class=" m-2 block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white-700 md:p-0 dark:text-red md:dark:hover:text-white-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Login </a>
+            <a href='/login' class=" m-2 block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white-700 md:p-0 dark:text-red md:dark:hover:text-white-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Register</a>
           {{/if}}
         </nav>
       </header>
