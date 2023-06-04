@@ -10,34 +10,24 @@
     <title>AudioRED</title>
   </head>
 
-  <body class='bg-gray-800'>
+  <body class='bg-zinc-800'>
     <div class=''>
       <header >
-        {{!-- <h1 class=''> 
-          {{#if logged_in}}
-            <a class= 'text-lg-white' href='/home'>Audio<span class='text-red-500'>RED</span></a>
-          {{else}}
-            <a class= 'text-gray text-8xl text-shadow-outline flex justify-center p-10 max-w-max mx-auto mt-48 bg-gray-700 rounded-xl shadow-lg flex items-center' href='/home'>Audio<span class='text-red-500'>RED</span></a>
-          {{/if}}
-        </h1>
-        <nav class="text-shadow-outline flex justify-center p-10 max-w-max mx-auto mt-28 bg-gray-700 rounded-xl shadow-lg flex items-center text-gray text-md'">
-          <!-- Conditionally render login or logout links -->
-        </nav> --}}
-        <nav class="flex justify-between">
+        <nav class="bg-zinc-950 p-4 flex justify-between">
           <div class="grow">
           {{#if logged_in}}
-            <a class='text-lg-white' href='/home'>Audio<span class='text-red-500'>RED</span></a>
+            <a class='text-zinc-300 text-4xl font-medium / p-1 outline outline-1 outline-zinc-700 rounded-xl shadow-lg ' href='/'>Audio<span class='font-bold text-rose-600'>RED</span></a>
           {{else}}
-            <a class='text-lg-white' href='/'>Audio<span class='text-red-500'>RED</span></a>
+            <a class='text-zinc-300 text-4xl font-medium / p-1 outline outline-1 outline-zinc-700 rounded-xl shadow-lg ' href='/'>Audio<span class='font-bold text-rose-600'>RED</span></a>
           {{/if}}
           </div>
-          <div class="flex gap-2">
+          <div class="content-center flex gap-2">
           {{#if logged_in}}
-            <a href='/profile'>profile</a>
+            <a class='text-rose-300 font-medium mt-2' href='/profile'>My Profile</a>
 
-            <button class=' m-2 block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white-700 md:p-0 dark:text-red md:dark:hover:text-white-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent' id='logout'>Logout</button>
+            <button class=' m-2 block py-2 pl-3 pr-4 text-zinc-900 rounded hover:bg-zinc-100 md:hover:bg-transparent md:border-0 md:hover:text-white-700 md:p-0 dark:text-rose 8d:dark:hover:text-white-500 dark:hover:bg-zinc-700 dark:hover:text-white md:dark:hover:bg-transparent' id='logout'>Logout</button>
           {{else}}
-            <a class='text-red-500' href='/login'>Login or Sign-up</a>
+            <a class='text-rose-300 font-medium mt-2' href='/login'>Login or Sign-up</a>
           {{/if}}
           </div>
         </nav>
