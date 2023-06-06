@@ -1,14 +1,28 @@
 <div class="columns-2 columns-xl gap-8 h-full">
     <div class="flex flex-col h-full p-8">        
-        <h2 class="p-4 bg-zinc-950 outline outline-1 outline-zinc-600 rounded text-3xl font-semibold mb-6 text-center text-rose-300">Trending Now</h2>
+        <h2 class="p-4 bg-zinc-950 outline outline-1 outline-zinc-600 rounded text-3xl font-semibold mb-6 text-center text-rose-300">Trending Playlists</h2>
             <div class=" p-1 flex-1 w-full outline outline-1 outline-zinc-600 rounded m-auto bg-zinc-700">
-                <ol id='trending' class="text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-md bg-zinc-500">data here</ol>
+                <ol id='trending' class="text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-md bg-zinc-500">
+                    {{#each trendingPlaylists}}
+                        <li class="text-zinc-300 text-lg font-medium p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg border border-8 border-zinc-700 rounded-md bg-zinc-500">
+                        {{this.name}}
+                        <a href="{{this.external_urls.spotify}}"><img class="w-10 h-10" src="{{this.images.[0].url}}"></a>
+                        </li>
+                    {{/each}}
+                </ol>
             </div>
     </div>
     <div class="flex flex-col h-full p-8">
-        <h2 class="p-4 bg-zinc-950 outline outline-1 outline-zinc-600 rounded text-3xl font-semibold mb-6 text-center text-rose-300">My Top 10 Songs</h2>
+        <h2 class="p-4 bg-zinc-950 outline outline-1 outline-zinc-600 rounded text-3xl font-semibold mb-6 text-center text-rose-300">My Top 5 Songs</h2>
             <div class="flex-1 w-full outline outline-1 outline-zinc-600 rounded m-auto bg-zinc-700">
-                <ol id='topTen' class="text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-md bg-zinc-500">data here</ol>
+                <ol id='topTen' class="text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-md bg-zinc-500">
+                    {{#each topSongs}}
+                        <li class="text-zinc-300 text-lg font-medium p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg border border-8 border-zinc-700 rounded-md bg-zinc-500">
+                        {{this.name}}
+                        <a href="{{this.external_urls.spotify}}"><img class="w-10 h-10" src="{{this.album.images.[1].url}}"></a>
+                        </li>
+                    {{/each}}
+                </ol>
             </div>
     </div>
 </div>
