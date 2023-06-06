@@ -10,8 +10,7 @@
     <title>AudioRED</title>
   </head>
 
-  <body class='bg-zinc-800'>
-    <div class=''>
+  <body class='bg-zinc-800 min-h-screen flex flex-col'>
       <header >
         <nav class="bg-zinc-950 p-4 flex justify-between">
           <div class="grow">
@@ -32,14 +31,14 @@
           </div>
         </nav>
       </header>
-      <main class='py-0'>
+      <main class='py-4 grow'>
         <!-- Render the sub layout -->
         {{{body}}}
       </main>
       <footer>
 
       </footer>
-    </div>
+
 
     {{#if logged_in}}
       <script src='/js/logout.js'></script>

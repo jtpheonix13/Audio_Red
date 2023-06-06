@@ -1,4 +1,94 @@
-<h2 class='space-x-4 outline outline-1 outline-zinc-700 text-zinc-300 font-medium text-5xl text-shadow-outline flex justify-center p-6 max-w-screen-lg mx-auto mt-6 bg-zinc-950 rounded-xl shadow-lg flex items-center'>
-  <span class='font-bold text-rose-600'>{{first_name}}'s</span>
-  <span> Page</span>
-</h2>
+<div>
+    <h2 class='space-x-4 outline outline-1 outline-zinc-700 text-zinc-300 font-medium text-5xl text-shadow-outline flex justify-center p-6 max-w-screen-lg mx-auto mt-6 bg-zinc-950 rounded-xl shadow-lg flex items-center'>
+        <span class='font-bold text-rose-600'>{{first_name}}'s</span>
+        <span> Page</span>
+    </h2>
+</div>
+
+<div class="grid justify-center">
+  <div class="grid grid-rows-1 grid-cols-2">
+    <div class=" h-max p-6">
+        <h2 class="p-4 bg-zinc-950 outline outline-1 outline-zinc-600 rounded text-3xl font-semibold mb-6 text-center text-rose-300">My Favorite Artists</h2>
+        <div class=" p-1 flex-1 h-full w-full outline outline-1 outline-zinc-600 rounded m-auto bg-zinc-700">
+            <div id='trending' class="text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-md bg-zinc-500">data here</div>
+        </div>
+    </div>
+    {{!-- <h2 class="p-4 bg-zinc-950 outline outline-1 outline-zinc-600 rounded text-3xl font-semibold mb-6 text-center text-rose-300">My Favorite Artists</h2> --}}
+    <div class="p-6">
+      <div class="content-center bg-zinc-700 rounded rounded-2xl justify-center grid grid-cols-3 gap-8 p-8">
+        <div class="col-span-3 sm:col-span-3 md:col-span-1 ">
+          <div class="p-1 bg-zinc-950 flex-1 w-full outline outline-1 outline-zinc-900 rounded m-auto"> 
+            <h3 class=" text-zinc-100 font-medium">playlist name</h3>
+            <a class="flex justify-center">
+              <div id='trending' class="justify-center w-fit flex space-x-4 text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-md bg-zinc-500">
+                <p>1</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-span-3 sm:col-span-3 md:col-span-1 ">
+          <div class="p-1 bg-zinc-950 flex-1 w-full outline outline-1 outline-zinc-900 rounded m-auto"> 
+            <h3 class=" text-zinc-100 font-medium">playlist name</h3>
+            <a class="flex justify-center">
+              <div id='trending' class="justify-center w-fit flex space-x-4 text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-md bg-zinc-500">
+                <p>1</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-span-3 sm:col-span-3 md:col-span-1 ">
+          <div class="p-1 bg-zinc-950 flex-1 w-full outline outline-1 outline-zinc-900 rounded m-auto"> 
+            <h3 class=" text-zinc-100 font-medium">playlist name</h3>
+            <a class="flex justify-center">
+              <div id='trending' class="justify-center w-fit flex space-x-4 text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-md bg-zinc-500">
+                <p>1</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center items-center mt-5">
+        <button class="content-end grid row-span-3 col-span-1 bg-rose-500 hover:bg-rose-200 text-white font-bold py-2 px-4 rounded " type="submit">Edit Playlists</button>
+      </div>
+    </div>
+</div>
+
+<div class="">
+    <div class="p-6">
+      <div class="content-center bg-zinc-700 rounded rounded-2xl justify-center grid grid-cols-3 gap-8 p-8">
+        <div class="col-span-3 sm:col-span-3 md:col-span-1 ">
+          <div class="p-1 bg-zinc-950 flex-1 w-full outline outline-1 outline-zinc-900 rounded m-auto"> 
+            <h3 class=" text-zinc-100 font-medium">Album Name</h3>
+            <a class="flex justify-center">
+              <div id='albumOne' class="justify-center w-fit flex space-x-4 text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-md bg-zinc-500">
+                <p>1</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-span-3 sm:col-span-3 md:col-span-1 ">
+          <div class="p-1 bg-zinc-950 flex-1 w-full outline outline-1 outline-zinc-900 rounded m-auto"> 
+            <h3 class=" text-zinc-100 font-medium">Album Name</h3>
+            <a class="flex justify-center">
+              <div id='albumTwo' class="justify-center w-fit flex space-x-4 text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-md bg-zinc-500">
+                <p>1</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-span-3 sm:col-span-3 md:col-span-1 ">
+          <div class="p-1 bg-zinc-950 flex-1 w-full outline outline-1 outline-zinc-900 rounded m-auto"> 
+            <h3 class=" text-zinc-100 font-medium">Album Name</h3>
+            <a class="flex justify-center">
+              <div id='albumThree' class="justify-center w-fit flex space-x-4 text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-md bg-zinc-500">
+                <p>1</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center items-center mt-5">
+        <button class="content-end grid row-span-3 col-span-1 bg-rose-500 hover:bg-rose-200 text-white font-bold py-2 px-4 rounded " type="submit">Edit Albums</button>
+      </div>
+    </div>
+</div>
