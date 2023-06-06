@@ -1,11 +1,21 @@
 const router = require('express').Router();
 
+
+
 router.get('/', async (req, res) => {
   try {
+    console.log('hit');
 
+    const spotifyApi = req.session.spotifyApi;
+    
+    const trending = req.session.trending;
+    const songs = req.session.songs;
+    
 
     res.render('home', {
-      logged_in: true
+      logged_in: true,
+      trendingPlaylists: trending.body.playlists.items,
+      topSongs: songs.body.items
     });
   } catch (err) {
     res.status(500).json(err);

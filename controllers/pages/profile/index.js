@@ -11,8 +11,15 @@ router.get('/', async (req, res) => {
       nest: true,
     });
 
+    const spotifyApi = req.session.spotifyApi;
+    
+    const playlists = req.session.playlists;
+    
+    console.log(playlists.body.items);
+
     res.render('profile', {
       ...userData,
+      playlists: playlists.body.items,
       logged_in: true
     });
   } catch (err) {

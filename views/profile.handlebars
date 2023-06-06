@@ -15,37 +15,19 @@
     </div>
     {{!-- <h2 class="p-4 bg-zinc-950 outline outline-1 outline-zinc-600 rounded text-3xl font-semibold mb-6 text-center text-rose-300">My Favorite Artists</h2> --}}
     <div class="p-6">
+      {{#each playlists}}
       <div class="content-center bg-zinc-700 rounded rounded-2xl justify-center grid grid-cols-3 gap-8 p-8">
         <div class="col-span-3 sm:col-span-3 md:col-span-1 ">
           <div class="p-1 bg-zinc-950 flex-1 w-full outline outline-1 outline-zinc-900 rounded m-auto"> 
-            <h3 class=" text-zinc-100 font-medium">playlist name</h3>
+            <h3 class=" text-zinc-100 font-medium">{{this.name}}</h3>
             <a class="flex justify-center">
               <div id='trending' class="justify-center w-fit flex space-x-4 text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-md bg-zinc-500">
-                <p>1</p>
+                <a href="{{this.external_urls.spotify}}"><img class="w-10 w-10" src="{{this.images.[0].url}}"></a>
               </div>
             </a>
           </div>
         </div>
-        <div class="col-span-3 sm:col-span-3 md:col-span-1 ">
-          <div class="p-1 bg-zinc-950 flex-1 w-full outline outline-1 outline-zinc-900 rounded m-auto"> 
-            <h3 class=" text-zinc-100 font-medium">playlist name</h3>
-            <a class="flex justify-center">
-              <div id='trending' class="justify-center w-fit flex space-x-4 text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-md bg-zinc-500">
-                <p>1</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-span-3 sm:col-span-3 md:col-span-1 ">
-          <div class="p-1 bg-zinc-950 flex-1 w-full outline outline-1 outline-zinc-900 rounded m-auto"> 
-            <h3 class=" text-zinc-100 font-medium">playlist name</h3>
-            <a class="flex justify-center">
-              <div id='trending' class="justify-center w-fit flex space-x-4 text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-md bg-zinc-500">
-                <p>1</p>
-              </div>
-            </a>
-          </div>
-        </div>
+        {{/each}}
       </div>
       <div class="flex justify-center items-center mt-5">
         <button class="content-end grid row-span-3 col-span-1 bg-rose-500 hover:bg-rose-200 text-white font-bold py-2 px-4 rounded " type="submit">Edit Playlists</button>
