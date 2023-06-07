@@ -38,11 +38,11 @@ router.get('/callback', async (req, res) => {
   spotifyApi.setAccessToken(access_token);
   spotifyApi.setRefreshToken(refresh_token);
 
-  const trending = await spotifyApi.getFeaturedPlaylists({ limit: 3 });
+  const trending = await spotifyApi.getFeaturedPlaylists({ limit: 5 });
   const songs = await spotifyApi.getMyTopTracks({ limit: 5, time_range: 'long_term' });
-  const playlists = await spotifyApi.getUserPlaylists({ limit: 5 });
+  const playlists = await spotifyApi.getUserPlaylists({ limit: 3 });
   const artists = await spotifyApi.getMyTopArtists({ limit: 5 });
-  const newRelease = await spotifyApi.getNewReleases({ limit : 5, offset: 0, country: 'SE' });
+  const newRelease = await spotifyApi.getNewReleases({ limit : 3, offset: 0, country: 'SE' });
   
   req.session.newRelease = newRelease;
   req.session.artists = artists;
