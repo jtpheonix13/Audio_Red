@@ -8,21 +8,27 @@
 <div class="grid justify-center">
   <div class="grid grid-rows-1 grid-cols-2">
     <div class=" h-max p-6">
-        <h2 class="p-4 bg-zinc-950 outline outline-1 outline-zinc-600 rounded text-3xl font-semibold mb-6 text-center text-rose-300">My Favorite Artists</h2>
-        <div class=" p-1 flex-1 h-full w-full outline outline-1 outline-zinc-600 rounded m-auto bg-zinc-500">
-            <div id='trending' class="text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-xl bg-zinc-500">data here</div>
-        </div>
-    </div>
-    {{!-- <h2 class="p-4 bg-zinc-950 outline outline-1 outline-zinc-600 rounded text-3xl font-semibold mb-6 text-center text-rose-300">My Favorite Artists</h2> --}}
+      <h2 class="p-4 bg-zinc-950 outline outline-1 outline-zinc-600 rounded text-3xl font-semibold mb-6 text-center text-rose-300">My Favorite Artists</h2>
+      <ol id='topTen' class="text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-md bg-zinc-950">
+        {{#each artists}}
+          <a href="{{this.external_urls.spotify}}" target="_blank">
+          <li class="m-2 items-center flex flex-none space-x-4 text-zinc-300 hover:text-rose-300 text-lg font-medium p-3 outline outline-1 outline-zinc-300 rounded-xl shadow-lg border border-8 border-zinc-700 rounded-md bg-zinc-950">
+          <img class="w-20 h-20" src="{{this.images.[1].url}}">
+          <div class="flex-1">{{this.name}}</div>
+          </li>
+          </a>
+        {{/each}}
+      </ol>
     <div class="p-3">
       <div class="border border-8 border-zinc-700 rounded-md content-center bg-zinc-500 rounded rounded-2xl justify-center grid grid-cols-3 gap-8 p-2">
+      <h2 class="p-4 bg-zinc-950 outline outline-1 outline-zinc-600 rounded text-3xl font-semibold mb-6 text-center text-rose-300">My Playlists</h2>
       {{#each playlists}}
           <div class=" col-span-3 sm:col-span-3 md:col-span-1 ">
             <div class="p-1 w-full rounded rounded-xl "> 
-              <a href={{this.external_urls.spotify}} class="flex justify-center">
-                <ol id='trending' class="flex flex-col items-center justify-center w-full space-x-2 text-zinc-300 text-lg font-medium / p-1 outline outline-1 outline-zinc-300 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-xl bg-zinc-950">
-                  <img class="w-20 h-20" src={{this.images.[0].url}}>
-                  <h3 class="text-zinc-100 font-medium">{{this.name}}</h3>
+              <a href={{this.external_urls.spotify}} class="flex justify-center" target="_blank">
+                <ol id='trending' class="flex flex-col items-center justify-center w-full space-x-2 text-zinc-300 hover:text-rose-300 text-lg font-medium / p-1 outline outline-1 outline-zinc-300 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-xl bg-zinc-950">
+                  <img class="w-24 h-24" src={{this.images.[0].url}}>
+                  <h3 class="text-zinc-100 hover:text-rose-300 font-medium">{{this.name}}</h3>
                 </ol>
               </a>
             </div>
@@ -37,13 +43,14 @@
 
     <div class="p-3">
       <div class="border border-8 border-zinc-700 rounded-md content-center bg-zinc-500 rounded rounded-2xl justify-center grid grid-cols-3 gap-8 p-2">
-      {{#each playlists}}
+      <h2 class="p-4 bg-zinc-950 outline outline-1 outline-zinc-600 rounded text-3xl font-semibold mb-6 text-center text-rose-300">New Releases</h2>
+      {{#each newRelease}}
           <div class=" col-span-3 sm:col-span-3 md:col-span-1 ">
             <div class="p-1 w-full rounded rounded-xl "> 
-              <a href={{this.external_urls.spotify}} class="flex justify-center">
-                <ol id='trending' class="flex flex-col items-center justify-center w-full space-x-2 text-zinc-300 text-lg font-medium / p-1 outline outline-1 outline-zinc-300 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-xl bg-zinc-950">
-                  <img class="w-20 h-20" src={{this.images.[0].url}}>
-                  <h3 class="text-zinc-100 font-medium">{{this.name}}</h3>
+              <a href={{this.external_urls.spotify}} class="flex justify-center" target="_blank">
+                <ol id='trending' class="flex flex-col items-center justify-center w-full space-x-2 text-zinc-300 hover:text-rose-300 text-lg font-medium / p-1 outline outline-1 outline-zinc-300 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-xl bg-zinc-950">
+                  <img class="w-28 h-28" src={{this.images.[1].url}}>
+                  <h3 class="text-zinc-100 hover:text-rose-300 font-medium">{{this.name}}</h3>
                 </ol>
               </a>
             </div>

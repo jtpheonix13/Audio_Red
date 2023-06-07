@@ -1,33 +1,46 @@
+{{#if spotify_api_set}}
 <div class="columns-2 columns-xl gap-8 h-full">
-    <div class="flex flex-col h-fit p-8">        
-        <h2 class="p-4 bg-zinc-950 outline outline-1 outline-zinc-600 rounded text-3xl font-semibold mb-6 text-center text-rose-300">Trending Playlists</h2>
-            <div class="h- p-1 flex-1 w-full outline outline-1 outline-zinc-600 rounded m-auto bg-zinc-700">
-                <ol id='trending' class="text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-md bg-zinc-500">
-                    {{#each trendingPlaylists}}
-                        <a href="{{this.external_urls.spotify}}">
-                        <li class="m-2 items-center flex flex-none space-x-4 text-zinc-300 hover:text-rose-300 text-lg font-medium p-3 outline outline-1 outline-zinc-300 rounded-xl shadow-lg border border-8 border-zinc-700 rounded-md bg-zinc-950">
+    <div class="flex flex-col h-fit p-8">
+        <h2
+            class="p-4 bg-zinc-950 outline outline-1 outline-zinc-600 rounded text-3xl font-semibold mb-6 text-center text-rose-300">
+            Trending Playlists</h2>
+        <div class="h- p-1 flex-1 w-full outline outline-1 outline-zinc-600 rounded m-auto bg-zinc-700">
+            <ol id='trending'
+                class="text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-md bg-zinc-500">
+                {{#each trendingPlaylists}}
+                <a href="{{this.external_urls.spotify}}" target="_blank">
+                    <li
+                        class="m-2 items-center flex flex-none space-x-4 text-zinc-300 hover:text-rose-300 text-lg font-medium p-3 outline outline-1 outline-zinc-300 rounded-xl shadow-lg border border-8 border-zinc-700 rounded-md bg-zinc-950">
                         <img class="w-20 h-20" src="{{this.images.[0].url}}">
                         <div class="flex-1">{{this.name}} - {{this.description}} </div>
-                        </li>
-                        </a>
-                    {{/each}}
-                </ol>
-            </div>
+                    </li>
+                </a>
+                {{/each}}
+            </ol>
+        </div>
     </div>
     <div class="flex flex-col h-fit p-8">
-        <h2 class="p-4 bg-zinc-950 outline outline-1 outline-zinc-600 rounded text-3xl font-semibold mb-6 text-center text-rose-300">My Top 5 Songs</h2>
-            <div class="flex-1 w-full outline outline-1 outline-zinc-600 rounded m-auto bg-zinc-700">
-                <ol id='topTen' class="text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-md bg-zinc-500">
-                    {{#each topSongs}}
-                        <a href="{{this.external_urls.spotify}}">
-                        <li class="m-2 items-center flex flex-none space-x-4 text-zinc-300 hover:text-rose-300 text-lg font-medium p-3 outline outline-1 outline-zinc-300 rounded-xl shadow-lg border border-8 border-zinc-700 rounded-md bg-zinc-950">
+        <h2
+            class="p-4 bg-zinc-950 outline outline-1 outline-zinc-600 rounded text-3xl font-semibold mb-6 text-center text-rose-300">
+            My Top 5 Songs</h2>
+        <div class="flex-1 w-full outline outline-1 outline-zinc-600 rounded m-auto bg-zinc-700">
+            <ol id='topTen'
+                class="text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-md bg-zinc-500">
+                {{#each topSongs}}
+                <a href="{{this.external_urls.spotify}}" target="_blank">
+                    <li
+                        class="m-2 items-center flex flex-none space-x-4 text-zinc-300 hover:text-rose-300 text-lg font-medium p-3 outline outline-1 outline-zinc-300 rounded-xl shadow-lg border border-8 border-zinc-700 rounded-md bg-zinc-950">
                         <img class="w-20 h-20" src="{{this.album.images.[1].url}}">
                         <div class="flex-1">{{this.name}} - {{this.album.artists.[0].name}}</div>
-                        </li>
-                        </a>
-                    {{/each}}
-                </ol>
-            </div>
+                    </li>
+                </a>
+                {{/each}}
+            </ol>
+        </div>
     </div>
 </div>
-
+{{else}}
+    <a href='/spotify/login'
+        class="flex flex justify-center text-white text-6xl bg-green-500 border-2 m-80 rounded-md h-20">Connect to
+        Spotify</a>
+{{/if}}

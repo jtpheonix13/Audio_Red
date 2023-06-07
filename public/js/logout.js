@@ -1,13 +1,20 @@
 const logout = async () => {
-  const response = await fetch('/api/users/logout', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-  });
+  try {
+    await Promise.all([
+      fetch('/api/users/logout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+      }),
+      fetch('/api/users/home/logout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+      })
+    ]);
 
-  if (response.ok) {
     document.location.replace('/');
-  } else {
-    alert(response.statusText);
+  } catch (error) {
+    console.log(error);
+    alert('An error occurred during logout. Please try again.');
   }
 };
 
