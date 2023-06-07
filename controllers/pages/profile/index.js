@@ -14,12 +14,16 @@ router.get('/', async (req, res) => {
     const spotifyApi = req.session.spotifyApi;
     
     const playlists = req.session.playlists;
+    const artists = req.session.artists;
+    const newRelease = req.session.newRelease;
     
-    console.log(playlists.body.items);
+    console.log(newRelease.body.albums.items);
 
     res.render('profile', {
       ...userData,
       playlists: playlists.body.items,
+      artists: artists.body.items,
+      newRelease: newRelease.body.albums.items,
       logged_in: true
     });
   } catch (err) {
