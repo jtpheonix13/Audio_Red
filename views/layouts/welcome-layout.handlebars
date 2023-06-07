@@ -17,11 +17,11 @@
           {{#if logged_in}}
             <a class= 'text-zinc-300' href='/home'>Audio<span class='text-rose-600'>RED</span></a>
           {{else}}
-            <a class= 'outline outline-1 outline-zinc-700 text-zinc-300 font-medium text-8xl text-shadow-outline flex justify-center p-10 max-w-max mx-auto mt-48 bg-zinc-950 rounded-xl shadow-lg flex items-center' href='/spotify/login'>Audio<span class='font-bold text-rose-600'>RED</span></a>
+            <a class= 'outline outline-1 outline-zinc-700 hover:outline-zinc-100 text-zinc-300 font-medium text-8xl text-shadow-outline flex justify-center p-10 max-w-max mx-auto mt-36 bg-zinc-950 rounded-xl shadow-lg flex items-center' href='/spotify/login'>Audio<span class='font-bold text-rose-600'>RED</span></a>
           {{/if}}
         </h1>
         
-        <nav class="outline outline-1 outline-zinc-700 flex justify-center p-10 max-w-max mx-auto mt-28 bg-zinc-950 rounded-xl shadow-lg flex items-center text-zinc text-md">
+        <nav class="outline outline-1 outline-zinc-700 hover:outline-zinc-100 flex justify-center p-10 max-w-max mx-auto mt-28 bg-zinc-950 rounded-xl shadow-lg flex items-center text-zinc text-md">
           <!-- Conditionally render login or logout links -->
           {{#if logged_in}}
             <a href='/home'>AudioRED</a>
@@ -30,7 +30,7 @@
 
             <button class='text-zinc-300 font-medium' id='logout'>logout</button>
           {{else}}
-            <a class='text-rose-300 font-medium' href='/login'>Login or Sign-up</a>
+            <a class='text-rose-300 hover:text-rose-100 font-medium' href='/login'>Login or Sign-up</a>
           {{/if}}
         </nav>
       </header>

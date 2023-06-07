@@ -37,7 +37,7 @@ router.get('/callback', async (req, res) => {
 
     const trending = await spotifyApi.getFeaturedPlaylists({ limit: 5 });
     const songs = await spotifyApi.getMyTopTracks({ limit: 5, time_range: 'long_term' });
-    const playlists = await spotifyApi.getUserPlaylists({ limit: 5 });
+    const playlists = await spotifyApi.getUserPlaylists({ limit: 3 });
     
     req.session.playlists = playlists;
     req.session.songs = songs;
