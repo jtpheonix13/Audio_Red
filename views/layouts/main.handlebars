@@ -20,13 +20,15 @@
             <a class='text-zinc-300 text-4xl font-medium / p-1 outline outline-1 outline-zinc-700 hover:outline-zinc-100 rounded-xl shadow-lg ' href='/'>Audio<span class='font-bold text-rose-600'>RED</span></a>
           {{/if}}
           </div>
-          <div class="content-center flex gap-2">
+          <div class="content-center flex gap-6">
           {{#if logged_in}}
             <a class='text-rose-300 hover:text-rose-100 font-medium mt-2' href='/profile'>My Profile</a>
 
-            <button class=' m-2 block py-2 pl-3 pr-4 text-zinc-600 rounded hover:bg-zinc-100 md:hover:bg-transparent md:border-0 md:hover:text-white-700 md:p-0 dark:text-rose 8d:dark:hover:text-white-500 dark:hover:bg-zinc-700 dark:hover:text-white md:dark:hover:bg-transparent' id='logout'>Logout</button>
+            <a class='text-rose-300 hover:text-rose-100 font-medium mt-2' href='/home'>Home</a>
+
+            <button class='block text-zinc-600 rounded hover:bg-zinc-100 md:hover:bg-transparent md:border-0 md:hover:text-white-700 md:p-0 dark:text-rose 8d:dark:hover:text-white-500 dark:hover:bg-zinc-700 dark:hover:text-white md:dark:hover:bg-transparent' id='logout'>Logout</button>
           {{else}}
-            <a class='text-rose-300 font-medium mt-2' href='/login'>Login or Sign-up</a>
+            <a class='text-rose-300 hover:text-rose-100 font-medium mt-2 ' href='/login'>Login or Sign-up</a>
           {{/if}}
           </div>
         </nav>
