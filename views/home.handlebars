@@ -1,3 +1,4 @@
+{{#if spotify_api_set}}
 <div class="columns-2 columns-xl gap-8 h-full">
     <div class="flex flex-col h-fit p-8">        
         <h2 class="p-4 bg-zinc-950 outline outline-1 outline-zinc-600 rounded text-3xl font-semibold mb-6 text-center text-rose-300">Trending Playlists</h2>
@@ -30,4 +31,6 @@
             </div>
     </div>
 </div>
-
+{{else}}
+<a href='/spotify/login'>connect to spotify</a>
+{{/if}}
