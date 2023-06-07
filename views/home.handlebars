@@ -6,6 +6,7 @@
                     {{#each trendingPlaylists}}
                         <li class="text-zinc-300 text-lg font-medium p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg border border-8 border-zinc-700 rounded-md bg-zinc-500">
                         {{this.name}}
+                        {{this.description}}
                         <a href="{{this.external_urls.spotify}}"><img class="w-10 h-10" src="{{this.images.[0].url}}"></a>
                         </li>
                     {{/each}}
@@ -19,6 +20,7 @@
                     {{#each topSongs}}
                         <li class="text-zinc-300 text-lg font-medium p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg border border-8 border-zinc-700 rounded-md bg-zinc-500">
                         {{this.name}}
+                        {{this.album.artists.[0].name}}
                         <a href="{{this.external_urls.spotify}}"><img class="w-10 h-10" src="{{this.album.images.[1].url}}"></a>
                         </li>
                     {{/each}}

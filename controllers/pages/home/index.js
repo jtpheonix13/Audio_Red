@@ -10,6 +10,7 @@ router.get('/', async (req, res) => {
     
     const trending = req.session.trending;
     const songs = req.session.songs;
+    console.log(trending.body.playlists.items[0].description);
     
 
     res.render('home', {
