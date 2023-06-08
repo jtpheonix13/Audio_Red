@@ -21,6 +21,6 @@ UI Spotify Connect / Login Page:
 ![Screenshot (23)](https://github.com/jtpheonix13/Audio_Red/assets/114614370/5316fab4-a3d8-4a36-82e6-b7cbccd32ec1)
 
 UI Profile Page :
-![Screenshot (27)](https://github.com/jtpheonix13/Audio_Red/assets/114614370/1a82b4f7-922d-4650-ba79-071066702691)
+![Screenshot (30)](https://github.com/jtpheonix13/Audio_Red/assets/114614370/197a6ff0-5fc3-404b-babf-3a9a1c8c303b)
 
 Link to Deployed App : Coming Soon
