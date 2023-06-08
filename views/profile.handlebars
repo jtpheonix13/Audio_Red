@@ -10,10 +10,10 @@
   <div class="grid grid-rows-1 grid-cols-2">
     <div class=" h-max p-6">
         <h2 class="p-4 bg-zinc-950 outline outline-1 outline-zinc-600 rounded text-3xl font-semibold mb-6 text-center text-rose-300">My Favorite Artists</h2>
-        <div class=" p-1 flex-1 h-full w-full outline outline-1  rounded m-auto bg-zinc-500">
+        <div class=" p-1 flex-1 h-full w-full rounded m-auto bg-zinc-700">
             <div id='t' class="text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-xl bg-zinc-500">
                 <ol>
-                  {{#each playlists}}
+                  {{#each artists}}
                   <a href="{{this.external_urls.spotify}}" target="_blank">
                     <li class="m-2 items-center flex flex-none space-x-4 text-zinc-300 hover:text-rose-300 text-lg font-medium p-3 outline outline-1 outline-zinc-300 rounded-xl shadow-lg border border-8 border-zinc-700 rounded-md bg-zinc-950">
                       <img class="w-20 h-20" src="{{this.images.[1].url}}">
@@ -26,15 +26,16 @@
         </div>
     </div>
     <div class="p-6 h-max grid grid justify-center">
-          <h2 class="p-4 bg-zinc-950 outline outline-1 outline-zinc-600 rounded text-3xl font-semibold mb-10 text-center text-rose-300">My Recent Playlists</h2>
+          <h2 class="p-4 bg-zinc-950 outline outline-1 outline-zinc-600 rounded text-3xl font-semibold mb-6 text-center text-rose-300">My Recent Playlists</h2>
       <div class="border border-8 border-zinc-700 rounded-md content-center bg-zinc-500 rounded rounded-2xl grid grid-cols-3 gap-8 p-2">
       {{#each playlists}}
           <div class=" col-span-3 lg:col-span-3 xl:col-span-1 ">
             <div class="p-1 w-full rounded rounded-xl "> 
               <a href={{this.external_urls.spotify}} class="">
                 <ol id='trending' class="flex flex-col items-center justify-center w-full space-x-2 text-zinc-300 text-lg font-medium / p-1 outline outline-1 outline-zinc-300 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-xl bg-zinc-950">
-                  <img class="w-32 h-32" src={{this.images.[0].url}}>
-                  <h3 class="text-zinc-100 font-medium"> - {{this.name}}</h3>
+                  <img class="w-42 h-42" src={{this.images.[0].url}}>
+                  <div class="flex-1">------</div>
+                  <h3 class="text-zinc-100 font-medium">{{this.name}}</h3>
                 </ol>
               </a>
             </div>
@@ -46,7 +47,7 @@
       </div>
     </div>
 </div>
-    <div class="p-3">
+    <div class="p-6">
       <div class="border border-8 border-zinc-700 rounded-md content-center bg-zinc-500 rounded rounded-2xl justify-center grid grid-cols-3 gap-8 p-2">
       {{#each newRelease}}
           <div class=" col-span-3 sm:col-span-3 md:col-span-1 ">
@@ -60,9 +61,6 @@
             </div>
           </div>
       {{/each}}
-      </div>
-      <div class="flex justify-center items-center mt-5">
-        <button class="content-end grid row-span-3 col-span-1 bg-rose-500 hover:bg-rose-200 text-white font-bold py-2 px-4 rounded " type="submit">Edit Playlists</button>
       </div>
     </div>
 

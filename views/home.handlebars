@@ -4,8 +4,9 @@
         <h2
             class="p-4 bg-zinc-950 outline outline-1 outline-zinc-600 rounded text-3xl font-semibold mb-6 text-center text-rose-300">
             Trending Playlists</h2>
-        <div class="h- p-1 flex-1 w-full outline outline-1 outline-zinc-600 rounded m-auto bg-zinc-700">
-            <ol id='trending' class="text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-md bg-zinc-500">
+        <div class="p-1 flex-1 w-full outline outline-1 outline-zinc-600 rounded m-auto bg-zinc-700">
+            <ol id='trending'
+                class="text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-md bg-zinc-500">
                 {{#each trendingPlaylists}}
                 <a href="{{this.external_urls.spotify}}" target="_blank">
                     <li
@@ -22,7 +23,7 @@
         <h2
             class="p-4 bg-zinc-950 outline outline-1 outline-zinc-600 rounded text-3xl font-semibold mb-6 text-center text-rose-300">
             My Top 5 Songs</h2>
-        <div class="flex-1 w-full outline outline-1 outline-zinc-600 rounded m-auto bg-zinc-700">
+        <div class="p-1 flex-1 w-full outline outline-1 outline-zinc-600 rounded m-auto bg-zinc-700">
             <ol id='topTen'
                 class="text-zinc-300 text-lg font-medium / p-3 outline outline-1 outline-zinc-700 rounded-xl shadow-lg / border border-8 border-zinc-700 rounded-md bg-zinc-500">
                 {{#each topSongs}}
@@ -40,6 +41,6 @@
 </div>
 {{else}}
     <a href='/spotify/login'
-        class="flex flex justify-center text-white text-6xl bg-green-500 border-2 m-80 rounded-md h-20">Connect to
+        class="flex flex justify-center text-white text-6xl bg-green-500 border-2 m-80 rounded-2xl h-20">Link to
         Spotify</a>
 {{/if}}
