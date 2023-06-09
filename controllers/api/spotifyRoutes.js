@@ -10,7 +10,7 @@ const { generateRandomString } = require('../../utils/helpers');
 const spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    redirectUri: 'https://lit-shelf-80408.herokuapp.com/home/callback' // This should be the callback URL for the authorization flow
+    redirectUri: `${BASE_URL}/home/callback` // This should be the callback URL for the authorization flow
 });
 
 // Authorization route
