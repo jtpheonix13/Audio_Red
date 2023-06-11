@@ -4,7 +4,7 @@ const spotifyApi = require('../../../config/spotify');
 
 router.get('/callback', async (req, res) => {
   const { code } = req.query;
-  
+  console.log(code);
   console.log("hit");
   try {
   // Retrieve access and refresh tokens using the authorization code
