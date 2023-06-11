@@ -8,7 +8,7 @@ router.get('/callback', async (req, res) => {
   console.log("hit");
   try {
   // Retrieve access and refresh tokens using the authorization code
-  //console.log(code);
+  console.log(code);
   const data = await spotifyApi.authorizationCodeGrant(code);
   //console.log(data);
   const { access_token, refresh_token } = data.body;
