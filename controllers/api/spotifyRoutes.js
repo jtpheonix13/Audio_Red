@@ -20,7 +20,7 @@ router.get('/login', (req, res) => {
   // Create the authorization URL
   // console.log(spotifyApi);
   const scopes = ['user-read-private', 'user-read-email', 'user-read-playback-state', 'user-top-read']
-  const authorizeURL = spotifyApi.createAuthorizeURL(scopes, state);
+  const authorizeURL = spotifyApi.createAuthorizeURL(scopes);
   //console.log(authorizeURL);
   
   // Redirect the user to the authorization URL

@@ -10,7 +10,7 @@ router.get('/callback', async (req, res) => {
   // Retrieve access and refresh tokens using the authorization code
   console.log(code);
   const data = await spotifyApi.authorizationCodeGrant(code);
-  //console.log(data);
+  console.log(data);
   const { access_token, refresh_token } = data.body;
 
   // Set the access and refresh tokens on the Spotify API client
