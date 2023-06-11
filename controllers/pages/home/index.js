@@ -17,20 +17,20 @@ router.get('/callback', async (req, res) => {
   spotifyApi.setAccessToken(access_token);
   spotifyApi.setRefreshToken(refresh_token);
 
-  const trending = await spotifyApi.getFeaturedPlaylists({ limit: 5 });
-  const songs = await spotifyApi.getMyTopTracks({ limit: 5, time_range: 'long_term' });
-  const playlists = await spotifyApi.getUserPlaylists({ limit: 3, time_range: 'long_term' });
-  const artists = await spotifyApi.getMyTopArtists({ limit: 5, time_range: 'long_term'});
-  const newRelease = await spotifyApi.getNewReleases({ limit : 3, offset: 0, country: 'SE' });
+  // const trending = await spotifyApi.getFeaturedPlaylists({ limit: 5 });
+  // const songs = await spotifyApi.getMyTopTracks({ limit: 5, time_range: 'long_term' });
+  // const playlists = await spotifyApi.getUserPlaylists({ limit: 3, time_range: 'long_term' });
+  // const artists = await spotifyApi.getMyTopArtists({ limit: 5, time_range: 'long_term'});
+  // const newRelease = await spotifyApi.getNewReleases({ limit : 3, offset: 0, country: 'SE' });
   
-  req.session.newRelease = newRelease;
-  req.session.artists = artists;
-  req.session.playlists = playlists;
-  req.session.songs = songs;
-  req.session.trending = trending;
+  // req.session.newRelease = newRelease;
+  // req.session.artists = artists;
+  // req.session.playlists = playlists;
+  // req.session.songs = songs;
+  // req.session.trending = trending;
   req.session.spotifyApi = spotifyApi; 
   
-  console.log(req.session.spotifyApi);
+  // console.log(req.session.spotifyApi);
 
   // Redirect the user back to the home page
   res.redirect('/home');
