@@ -36,6 +36,7 @@ router.get('/callback', async (req, res) => {
   res.redirect('/home');
   } catch (error) {
       res.status(500).json(error);
+      console.log(error);
   }
 });
 
