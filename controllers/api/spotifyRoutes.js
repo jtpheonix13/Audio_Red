@@ -5,6 +5,7 @@ const express = require('express');
 const router = express.Router();
 const SpotifyWebApi = require('spotify-web-api-node');
 const { generateRandomString } = require('../../utils/helpers');
+const querystring = require('querystring');
 
 // Set up the Spotify API client
 const spotifyApi = new SpotifyWebApi({
