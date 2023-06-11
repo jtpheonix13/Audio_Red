@@ -1,27 +1,6 @@
 const router = require('express').Router();
 const spotifyApi = require('../../../config/spotify');
 
-// const generateSpotifyApi = async (code) => {
-//   const data = await spotifyApi.authorizationCodeGrant(code);
-//   //console.log(data);
-//   const { access_token, refresh_token } = data.body;
-
-//   // Set the access and refresh tokens on the Spotify API client
-//   spotifyApi.setAccessToken(access_token);
-//   spotifyApi.setRefreshToken(refresh_token);
-
-//   const trending = await spotifyApi.getFeaturedPlaylists({ limit: 3 });
-//   const songs = await spotifyApi.getMyTopTracks({ limit: 5, time_range: 'long_term' });
-//   const playlists = await spotifyApi.getUserPlaylists({ limit: 3 });
-  
-//   return {
-//     playlists,
-//     songs,
-//     trending,
-//     spotifyApi
-//   }
-
-// };
 
 router.get('/callback', async (req, res) => {
   const { code } = req.query;
