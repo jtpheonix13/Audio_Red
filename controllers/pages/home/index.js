@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const spotifyApi = require('../../../config/spotify');
 const SpotifyWebApi = require('spotify-web-api-node');
 
 
