@@ -1,5 +1,5 @@
 const router = require('express').Router();
-//const spotifyApi = require('../../../config/spotify');
+const spotifyApi = require('../../../config/spotify');
 
 
 router.get('/callback', async (req, res) => {
