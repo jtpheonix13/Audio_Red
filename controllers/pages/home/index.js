@@ -1,5 +1,13 @@
 const router = require('express').Router();
 const spotifyApi = require('../../../config/spotify');
+const SpotifyWebApi = require('spotify-web-api-node');
+
+
+const spotifyApi = new SpotifyWebApi({
+  clientId: process.env.CLIENT_ID,
+  clientSecret: process.env.CLIENT_SECRET,
+  redirectUri: process.env.REDIRECT_URI // This should be the callback URL for the authorization flow
+});
 
 
 router.get('/callback', async (req, res) => {
