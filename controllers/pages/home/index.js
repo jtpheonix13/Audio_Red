@@ -1,37 +1,23 @@
 const router = require('express').Router();
-const spotifyApi = require('../../../config/spotify');
+const SpotifyWebApi = require('spotify-web-api-node');
 
-// const generateSpotifyApi = async (code) => {
-//   const data = await spotifyApi.authorizationCodeGrant(code);
-//   //console.log(data);
-//   const { access_token, refresh_token } = data.body;
 
-//   // Set the access and refresh tokens on the Spotify API client
-//   spotifyApi.setAccessToken(access_token);
-//   spotifyApi.setRefreshToken(refresh_token);
+const spotifyApi = new SpotifyWebApi({
+  clientId: process.env.CLIENT_ID,
+  clientSecret: process.env.CLIENT_SECRET,
+  redirectUri: process.env.REDIRECT_URI // This should be the callback URL for the authorization flow
+});
 
-//   const trending = await spotifyApi.getFeaturedPlaylists({ limit: 3 });
-//   const songs = await spotifyApi.getMyTopTracks({ limit: 5, time_range: 'long_term' });
-//   const playlists = await spotifyApi.getUserPlaylists({ limit: 3 });
-  
-//   return {
-//     playlists,
-//     songs,
-//     trending,
-//     spotifyApi
-//   }
-
-// };
 
 router.get('/callback', async (req, res) => {
   const { code } = req.query;
-  
+  console.log(code);
   console.log("hit");
   try {
   // Retrieve access and refresh tokens using the authorization code
-  //console.log(code);
+  console.log(code);
   const data = await spotifyApi.authorizationCodeGrant(code);
-  //console.log(data);
+  console.log(data);
   const { access_token, refresh_token } = data.body;
 
   // Set the access and refresh tokens on the Spotify API client
@@ -57,6 +43,7 @@ router.get('/callback', async (req, res) => {
   res.redirect('/home');
   } catch (error) {
       res.status(500).json(error);
+      console.log(error);
   }
 });
 
